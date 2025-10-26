@@ -196,7 +196,7 @@ body {
 .circle:nth-child(3) {
   top: 75%;
   left: 10%;
-  background: radial-gradient(circle, #ffffff 0%, #ffffff 100%); /* белый */
+  background: radial-gradient(circle, #ffffff 0%, #ffffff 100%); 
   opacity: 0.5;
   animation-duration: 14s;
 }
@@ -386,11 +386,32 @@ transform: rotate(10deg);
    font-weight: 600; 
 }
 
-.buttons:hover {
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #2a5338, #55cc7c);
+
+
+.buttons,
+.buttons2 {
+  transition: all 0.3s ease;
+  transform-origin: center;
 }
 
+
+.buttons:hover {
+  background: linear-gradient(90deg, #2a5338, #55cc7c);
+  transform: scale(1.08) rotate(-1deg);
+}
+
+.buttons2:hover {
+  background-color: #1b1e20;
+  transform: scale(1.08);
+  letter-spacing: 1px;
+}
+
+
+.buttons:active,
+.buttons2:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(85, 204, 124, 0.4);
+}
 
 .buttons2 {
   position: relative;
@@ -800,20 +821,32 @@ z-index: 11;
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #cfcfcf;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 5px; 
 }
 
+.card p + p {
+  margin-top: 5px; 
+}
+
+
+
+
+
 .price {
-  font-size: 1rem;
+  font-size: 2rem;
   margin-bottom: 15px;
 }
 
 .price small {
   color: #9a9a9a;
-  margin-left: 5px;
-}
+  margin-left: 20px;
+  font-size: 1rem;
+
+
+}  
 
 .buy-btn {
   background-color: #1db954;
@@ -830,7 +863,7 @@ z-index: 11;
   transform: scale(0.95);
 }
 
-/* стрелка */
+
 .strelka {
   position: relative;
   bottom: 1900px;
@@ -902,3 +935,268 @@ z-index: 11;
    font-weight: 500; 
   font-family: "Montserrat", sans-serif;
 }
+
+.buttons-bottom {
+ display: inline-flex; 
+  justify-content: center;
+  align-items: center; 
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #55cc7c, #2a5338);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  border-radius: 82px;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 200px;
+  height: 60px;
+   font-size: 20px;
+   font-weight: 600; 
+  border: none;      
+  outline: none;      
+   transition: transform 0.3s ease; 
+  position: relative;
+  z-index: 10; 
+  cursor: pointer; 
+}
+
+.buttons-bottom.clicked {
+  transform: rotate(5deg) scale(2.1);
+}
+
+.knife {
+  position: fixed; 
+  width: 50px;
+  height: auto;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.5s ease;
+}
+
+
+.gradient3-text {
+  background: linear-gradient(90deg, #55cc7c, #2a5338); 
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+ font-weight: 600;
+}
+
+
+.New-olianse {
+
+
+  position: absolute;
+  display: flex;
+  flex-direction: column; 
+  background: linear-gradient(90deg, #55cc7c, #2a5338); 
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: bold;
+  font-size: 80px;
+  font-family: "Montserrat", sans-serif;
+  top: 3200px;
+  margin-bottom: 10px; 
+  left: 1100px;
+
+}
+
+.New-olianse p {
+  margin: 0; 
+}
+
+.text-mini4 {
+  position: absolute;
+  top: 3250px;
+  left: 500px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200; 
+}
+
+
+.decor-vektor4 {
+  position: absolute;
+  top: 3200px;
+  right: 1200px;
+  height: 400px;        
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.dart-vader {
+  position: relative;
+  width: 600px;   
+  height: 300px;  
+  border-radius: 20px; 
+  object-fit: cover; 
+  bottom: 1300px;
+  z-index: 999;
+  left: 200px;
+}
+
+.dart-vader2 {
+  position: relative;
+  width: 600px;   
+  height: 300px;  
+  border-radius: 20px; 
+  object-fit: cover; 
+  bottom: 1300px;
+  z-index: 999;
+  left: 250px;
+}
+
+.dart-vader3 {
+  position: relative;
+  width: 400px;   
+  height: 300px;  
+  border-radius: 20px; 
+  object-fit: cover; 
+  bottom: 970px;
+  z-index: 999;
+ right: 1010px;
+}
+
+.dart-vader4 {
+  position: relative;
+  width: 400px;   
+  height: 300px;  
+  border-radius: 20px; 
+  object-fit: cover; 
+  bottom: 1275px;
+  z-index: 999;
+   left: 620px;
+}
+
+.dart-vader5 {
+  position: relative;
+  width: 400px;   
+  height: 300px;  
+  border-radius: 20px; 
+  object-fit: cover; 
+  bottom: 1275px;
+  z-index: 999;
+   left: 640px;
+}
+
+
+.Our-contacts {
+
+
+  position: absolute;
+  display: flex;
+  flex-direction: column; 
+  background: linear-gradient(90deg, #55cc7c, #2a5338); 
+ background-clip: text;
+ -webkit-text-fill-color: transparent;
+  font-size: 35px;
+  font-weight: bold;
+  font-size: 80px;
+  font-family: "Montserrat", sans-serif;
+  top: 4300px;
+  margin-bottom: 10px; 
+  left: 150px;
+
+}
+
+.Our-contacts p {
+  margin: 0; 
+}
+
+
+.text-mini5 {
+  position: absolute;
+ top: 4600px;
+ left: 150px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200; 
+}
+
+
+.insta {
+position: relative;
+bottom: 450px;
+right: 650px;
+
+}
+
+.telephone {
+position: relative;
+bottom: 370px;
+right: 705px;
+
+}
+
+.zombie100 {
+position: relative;
+bottom: 540px;
+left: 230px;
+ font-weight: 400; 
+ font-family: "Montserrat", sans-serif;
+ font-size: 30px;
+
+}
+
+.zombie101 {
+position: relative;
+bottom: 510px;
+left: 230px;
+ font-weight: 400; 
+ font-family: "Montserrat", sans-serif;
+ font-size: 30px;
+
+}
+
+.decor-vektor5 {
+  position: absolute;
+  top: 4700px;
+  right: 0px;
+  height: 1000px;        
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.paper-yu {
+
+position: relative;
+bottom: 1150px;
+left: 1000px;
+z-index: 2;
+}
+
+
+.star1488-3 {
+ position: relative;
+bottom: 1550px;
+left: 520px;
+  z-index: 99;
+}
+
+.we-have-3 {
+
+   position: relative;
+   left: 1040px;
+   bottom: 1750px;
+   z-index: 999;
+    color: #ffffff;
+   font-size: 40px; 
+   font-family: "Montserrat", sans-serif;
+   line-height: 0.01; 
+    font-weight: 200; 
+    pointer-events: none;
+
+}
+
+section:last-of-type,
+div:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+
